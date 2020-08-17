@@ -1,0 +1,28 @@
+<!-- pages/todos/todos.wxml -->
+<view class="container">
+	<view class="search">
+		<image src='../../images/plus.png' bindtap="addListHandler" ></image>
+		<input type="text" placeholder="anything here... " value='{{input}}' bindinput='bindinputHandler' bindconfirm='addListHandler'/>
+	</view>
+	
+	<block wx:if='{{list.length}}'>
+		<view class="todos">
+			<view class="item" wx:for='{{list}}' bindtap='checkBindtapHandler' data-key='{{ index }}'>
+				<icon type='{{item.check?"success":"circle"}}' class='check' size='16' ></icon>
+				<text class='content'>{{item.content}}</text>
+				<icon type="clear" size='16' catchtap='removeCatchtapHandler' data-key='{{index}}'></icon>
+			</view>
+		</view>
+		<view class="footer">
+			<text class="start" selectable="false" space="false" decode="false" bindtap='allBindtap'>Toggle All</text>
+			<text class="middle" selectable="false" space="false" decode="false">{{leftCount}} {{leftCount>1?'items':'item'}} Left</text>
+			<text class="end" selectable="false" space="false" decode="false" bindtap="clearBindtapHandler">Clear Completed</text>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="" hover-class="none" hover-stop-propagation="false">
+			null
+		</view>
+	</block>
+
+</view>

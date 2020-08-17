@@ -1,0 +1,66 @@
+/* pages/todos/todos.wxss */
+
+.container {
+    border-top: 1rpx solid #e0e0e0;
+    padding: 0rpx ;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin: 20rpx;
+    padding: 20rpx;
+    border: 1rpx solid #e0e0e0;
+    border-radius: 10rpx;
+    box-shadow: 0 0 8rpx #e0e0e0;    
+}
+
+.search image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;  
+}
+.search input{
+    flex:1
+}
+
+.todos{
+    border:1px solid #e0e0e0;
+    margin: 20rpx;
+}
+
+.todos .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10rpx;
+    border-bottom: 1rpx solid #e0e0e0;
+
+}
+.todos .item .check{
+    margin-right: 10rpx;
+}
+
+.todos .item .content{
+    flex:1;
+    align-self: flex-start;
+} 
+
+.footer{
+    margin: 20rpx;
+    margin-top: 0rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .start{
+    flex:1;
+}
+
+.footer .middle{
+    flex: 1;
+}
+
+
+
